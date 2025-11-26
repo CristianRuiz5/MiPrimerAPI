@@ -1,8 +1,7 @@
 ﻿using MiPrimerAPI.DataAccessLayer.Dtos.Category;
+using MiPrimerAPI.DataAccessLayer.Dtos.Movie;
 using MiPrimerAPI.DataAccessLayer.Models;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 using AutoMapper;
-
 
 namespace MiPrimerAPI.APIMapper
 {
@@ -10,8 +9,13 @@ namespace MiPrimerAPI.APIMapper
     {
         public Mappers()
         {
+            // Category
             CreateMap<Category, CategoryDto>().ReverseMap();
             CreateMap<Category, CategoryCreateUpdateDto>().ReverseMap();
+
+            // Movie
+            CreateMap<Movie, MovieDto>().ReverseMap();
+            CreateMap<Movie, MovieCreateUpdateDto>().ReverseMap();
         }
     }
 }

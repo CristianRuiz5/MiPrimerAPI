@@ -6,6 +6,8 @@ using MiPrimerAPI.Repository.iRepository;
 using MiPrimerAPI.Services;
 using MiPrimerAPI.Services.iServices;
 
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -17,6 +19,19 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 //Repositories
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+
+//Movies
+
+builder.Services.AddScoped<IMovieService, MovieService>();
+builder.Services.AddScoped<IMovieRepository, MovieRepository>();
+
+
+
+
+
+
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
