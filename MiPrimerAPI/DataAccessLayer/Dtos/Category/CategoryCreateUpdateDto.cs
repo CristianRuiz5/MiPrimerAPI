@@ -10,3 +10,4 @@ namespace MiPrimerAPI.DataAccessLayer.Dtos.Category
         public string Name { get; set; }
     }
 }
+//
